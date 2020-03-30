@@ -1,23 +1,27 @@
-// Play button logic
+// Variables
 
 var playbtn = document.querySelector(".playbtn");
 var pause = true;
 
-playbtn.addEventListener("click", playBtnClick);
+// Function calls
 
-playCountdown()
+playbtn.addEventListener("click", playBtnClick);
+playCountdown();
+
+// Play button logic
 
 function playBtnClick() {
   if (playbtn.innerHTML === "PLAY") {
     playbtn.innerHTML = "PAUSE";
     pause = false;
-} else {
+  } else {
     playbtn.innerHTML = "PLAY";
     pause = true;
   }
 }
 
 // Countdown
+
 var seconds = 90;
 
 function playCountdown() {
@@ -28,7 +32,7 @@ function playCountdown() {
     document.getElementById("countdown").textContent = seconds;
     if (seconds <= 0) {
       clearInterval(countdown);
-    document.getElementById("countdown").textContent = seconds;
+      document.getElementById("countdown").textContent = "Time is up";
     }
   }, 1000);
 }
