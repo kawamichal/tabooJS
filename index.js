@@ -6,6 +6,7 @@ var pause = true;
 // Function calls
 
 playbtn.addEventListener("click", playBtnClick);
+
 playCountdown();
 
 // Play button logic
@@ -22,17 +23,18 @@ function playBtnClick() {
 
 // Countdown
 
-var seconds = 90;
-
 function playCountdown() {
+  var seconds = 3;
   var countdown = setInterval(function() {
     if (!pause) {
+      document.getElementById("countdown").textContent = seconds + " seconds";
       seconds--;
     }
-    document.getElementById("countdown").textContent = seconds;
-    if (seconds <= 0) {
+    if (seconds < 0) {
       clearInterval(countdown);
-      document.getElementById("countdown").textContent = "Time is up";
+      document.getElementById("countdown").textContent = "Time is up!";
+      playBtnClick();
+      playCountdown();
     }
   }, 1000);
 }
