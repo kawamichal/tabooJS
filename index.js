@@ -1,22 +1,23 @@
 // Variables
 
-var playbtn = document.querySelector(".playbtn");
+var playBtn = document.querySelector(".playbtn");
+var countdownID = document.getElementById("countdown");
 var pause = true;
 
 // Function calls
 
-playbtn.addEventListener("click", playBtnClick);
+playBtn.addEventListener("click", playBtnClick);
 
 playCountdown();
 
 // Play button logic
 
 function playBtnClick() {
-  if (playbtn.innerHTML === "PLAY") {
-    playbtn.innerHTML = "PAUSE";
+  if (playBtn.innerHTML === "PLAY") {
+    playBtn.innerHTML = "PAUSE";
     pause = false;
   } else {
-    playbtn.innerHTML = "PLAY";
+    playBtn.innerHTML = "PLAY";
     pause = true;
   }
 }
@@ -24,15 +25,23 @@ function playBtnClick() {
 // Countdown
 
 function playCountdown() {
-  var seconds = 3;
+  var seconds = 90;
   var countdown = setInterval(function() {
     if (!pause) {
-      document.getElementById("countdown").textContent = seconds + " seconds";
+      if (seconds === 1) {
+        countdownID.textContent = seconds + " second";
+      } else {
+        countdownID.textContent = seconds + " seconds";
+      }
       seconds--;
     }
+
     if (seconds < 0) {
       clearInterval(countdown);
-      document.getElementById("countdown").textContent = "Time is up!";
+      countdownID.textContent = "Time is up!";
+      setTimeout(function() {
+        countdownID.textContent = "90 seconds";
+      }, 2500);
       playBtnClick();
       playCountdown();
     }
