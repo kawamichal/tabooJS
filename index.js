@@ -1,12 +1,16 @@
 // Variables
 
 var playBtn = document.querySelector(".playbtn");
+var resetBtn = document.querySelector(".resetbtn");
 var countdownID = document.getElementById("countdown");
 var pause = true;
+var seconds = 90;
+
 
 // Function calls
 
 playBtn.addEventListener("click", playBtnClick);
+resetBtn.addEventListener("click", resetBtnClick);
 
 playCountdown();
 
@@ -22,10 +26,17 @@ function playBtnClick() {
   }
 }
 
+function resetBtnClick() {
+  playBtn.innerHTML = "PLAY";
+  pause = true;
+  seconds = 90;
+  countdownID.textContent = "90 seconds";
+}
+
 // Countdown
 
 function playCountdown() {
-  var seconds = 90;
+  clearInterval(countdown);
   var countdown = setInterval(function() {
     if (!pause) {
       if (seconds === 1) {
