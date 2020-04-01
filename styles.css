@@ -22,7 +22,7 @@ h1 {
 #game-box {
   background-color: #feffa3;
   margin: 0 15px 60px;
-  padding-bottom: 70px;
+  padding: 0 15px 70px;
 }
 
 #menu-box {
