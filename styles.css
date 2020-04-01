@@ -1,26 +1,97 @@
 /* Main elements */
-
-h1 {
-  color: blue;
+body {
+  background-color: #0d044a;
+  color: #0d044a;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
-body {
+/* Id definitions */
+
+#navbar {
+  color: white;
+}
+
+#game-box {
   background-color: #feffa3;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#menu-box {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: inherit;
+}
+
+#countdown {
+  padding-left: 10px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+#score {
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 /* Class definitions */
-.playbtn {
-  background-color: greenyellow;
-}
-.playbtn:hover {
-  background-color: #5cbf2a;
+.turn-notification {
+  text-align: center;
+  padding-top: 30px;
 }
 
-.playbtn:active {
+.btn {
+  background-color: #0d044a;
+  color: white;
+  font-size: 1rem;
+  float: left;
+  width: 47%;
+  height: 50px;
+  border: 0;
+  margin: 0 auto;
+  outline: none;
+}
+.btn:hover {
+  background-color: white;
+  color: #0d044a;
+}
+
+.btn:active {
   position: relative;
   top: 1px;
 }
 
+.resetbtn {
+  float: right;
+}
+
+.clock {
+  padding: 30px 0;
+}
+
+.word-list {
+  text-align: center;
+  background-color: white;
+  list-style-type: none;
+  margin: 0 0;
+  padding: 0 0 20px;
+}
+
 .main-word {
-    font-weight: bold;
+  font-size: 2rem;
+  background-color: #ff6961;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.score-table {
+  table-layout: fixed;
+  width: 100%;
 }

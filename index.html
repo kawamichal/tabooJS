@@ -3,35 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font awesome -->
+
+    <script
+      src="https://kit.fontawesome.com/9ce382f21b.js"
+      crossorigin="anonymous"
+    ></script>
+    />
+
+    <!-- Title -->
+
+    <title>tabooJS</title>
   </head>
   <body>
-    <h1>tabooJS</h1>
-    <h2 class="turn-notification">Yellow team's turn</h2>
-    <button class="playbtn">PLAY</button>
-    <button class="resetbtn">RESET</button>
-    <div id="countdown">90 seconds</div>
-    <ul>
-        <li class="main-word">TABOO</li>
-        <li class="frb-word">GRA</li>
-        <li class="frb-word">ZABAWA</li>
-        <li class="frb-word">SŁOWO</li>
-        <li class="frb-word">ZGADYWANIE</li>
-        <li class="frb-word">ZABRONIONE</li>
-    </ul>
-    <button id="correct">+</button>
-    <button id="wrong">-</button>
-    <table>
-      <tr>
-        <th>YELLOW</th>
-        <th>GREEN</th>
-      </tr>
-      <tr>
-        <td id="yellow-score">0</td>
-        <td id="green-score">0</td>
-      </tr>
-    </table>
+    <!-- Navbar -->
+
+    <div id="navbar">
+      <h1>tabooJS</h1>
+    </div>
+    <div id="game-box">
+      <!-- Turn notification -->
+
+      <h2 class="turn-notification">Yellow team's turn!</h2>
+
+      <!-- Game menu -->
+
+      <div id="menu-box">
+        <button class="btn playbtn">PLAY</button>
+        <button class="btn resetbtn">RESET</button>
+
+        <i class="far fa-clock"><span id="countdown" >90 seconds</span></i>
+
+        <ul class="word-list">
+          <li class="main-word">TABOO</li>
+          <li class="frb-word">GRA</li>
+          <li class="frb-word">ZABAWA</li>
+          <li class="frb-word">SŁOWO</li>
+          <li class="frb-word">ZGADYWANIE</li>
+          <li class="frb-word">ZABRONIONE</li>
+        </ul>
+
+        <button id="correct">+</button>
+        <button id="wrong">-</button>
+      </div>
+
+      <!-- Score table -->
+
+      <div id="score">
+        <table class="score-table">
+          <tr>
+            <th>YELLOW</th>
+            <th>GREEN</th>
+          </tr>
+          <tr>
+            <td id="yellow-score">0</td>
+            <td id="green-score">0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- Scripts -->
 
     <script src="index.js"></script>
   </body>

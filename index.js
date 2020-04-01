@@ -28,13 +28,14 @@ var wrongBtn = document.getElementById("wrong");
 var yellowScore = document.getElementById("yellow-score");
 var greenScore = document.getElementById("green-score");
 var turnNotification = document.querySelector(".turn-notification");
+var gameBox = document.getElementById("game-box");
 
 //Flags
 var pause = true; // Set the timer to paused by default
 var turn = true; // True - yellow team, False - green team
 
 //Values
-var gameTime = 3; //
+var gameTime = 90; //
 var seconds = gameTime;
 var yellow = 0;
 var green = 0;
@@ -103,10 +104,10 @@ function playCountdown() {
 // Background switch
 function backgroundSwitch() {
   if (turn) {
-    document.body.style.backgroundColor = "#feffa3";
+    gameBox.style.backgroundColor = "#feffa3";
     turnNotification.innerText = "Yellow team's turn!";
   } else {
-    document.body.style.backgroundColor = "#a7f69a";
+    gameBox.style.backgroundColor = "#a7f69a";
     turnNotification.innerText = "Green team's turn!";
   }
 }
