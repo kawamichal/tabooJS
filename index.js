@@ -35,7 +35,7 @@ var pause = true; // Set the timer to paused by default
 var turn = true; // True - yellow team, False - green team
 
 //Values
-var gameTime = 90; //
+var gameTime = 1; //
 var seconds = gameTime;
 var yellow = 0;
 var green = 0;
@@ -58,9 +58,13 @@ function playBtnClick() {
   if (playBtn.innerHTML === "PLAY") {
     playBtn.innerHTML = "PAUSE";
     pause = false;
+    correctBtn.classList.toggle("inactive");
+    wrongBtn.classList.toggle("inactive");
   } else {
     playBtn.innerHTML = "PLAY";
     pause = true;
+    correctBtn.classList.toggle("inactive");
+    wrongBtn.classList.toggle("inactive");
   }
 }
 
@@ -94,6 +98,8 @@ function playCountdown() {
         } else {
           turn = true;
         }
+        correctBtn.classList.toggle("inactive");
+        wrongBtn.classList.toggle("inactive");
         backgroundSwitch();
         playCountdown();
       }, 2000);
@@ -107,8 +113,8 @@ function backgroundSwitch() {
     gameBox.style.backgroundColor = "#feffa3";
     turnNotification.innerText = "Yellow team's turn!";
   } else {
-    gameBox.style.backgroundColor = "#a7f69a";
-    turnNotification.innerText = "Green team's turn!";
+    gameBox.style.backgroundColor = "#85E3FF";
+    turnNotification.innerText = "Blue team's turn!";
   }
 }
 

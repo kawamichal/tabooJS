@@ -51,14 +51,14 @@ h1{
 }
 
 .buttons {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
 }
 
 .btn {
   background-color: #0d044a;
   color: white;
   font-size: 1.2rem;
-  width: 47%;
+  width: 48%;
   height: 50px;
   border: 0;
   margin: 0 auto;
@@ -71,6 +71,18 @@ h1{
 
 .right {
   float: right;
+}
+
+.green {
+  background-color: #1ec98e;
+}
+
+.red {
+  background-color: #ff6961;
+}
+
+.inactive {
+  background-color: grey;
 }
 
 .btn:hover {
@@ -95,7 +107,7 @@ h1{
   text-align: center;
   background-color: white;
   list-style-type: none;
-  margin: 50px 0;
+  margin: 50px 0 20px;
   padding: 0 0 20px;
 }
 
@@ -117,3 +129,4 @@ h1{
   table-layout: fixed;
   width: 100%;
 }
+
