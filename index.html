@@ -25,14 +25,12 @@
     <title>tabooJS</title>
   </head>
   <body>
-
     <!-- Navbar -->
 
     <div id="navbar">
       <h1>tabooJS</h1>
     </div>
     <div id="game-box">
-
       <!-- Turn notification -->
 
       <h2 class="turn-notification">Yellow team's turn!</h2>
@@ -62,18 +60,37 @@
 
       <!-- Score table -->
       <div id="score">
-      <button class="score-btn btn">SEE SCORES</button>
 
-        <table class="score-table">
-          <tr>
-            <th>YELLOW</th>
-            <th>GREEN</th>
-          </tr>
-          <tr>
-            <td id="yellow-score">0</td>
-            <td id="green-score">0</td>
-          </tr>
-        </table>
+        <!-- Trigger/Open The Modal -->
+
+        <button id="modalBtn" class="score-btn btn">SEE SCORES</button>
+
+        <!-- The Modal -->
+
+        <div id="scoreModal" class="modal">
+
+          <!-- Modal content -->
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Score</h2>
+            </div>
+            
+            <div class="modal-body">
+              <table class="score-table">
+                <tr>
+                  <th>YELLOW</th>
+                  <th>BLUE</th>
+                </tr>
+                <tr>
+                  <td id="yellow-score">0</td>
+                  <td id="green-score">0</td>
+                </tr>
+            </div>
+
+          </div>
+        </div>
       </div>
     </div>
 

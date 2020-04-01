@@ -30,6 +30,12 @@ var greenScore = document.getElementById("green-score");
 var turnNotification = document.querySelector(".turn-notification");
 var gameBox = document.getElementById("game-box");
 
+// Modal selectors
+var modal = document.getElementById("scoreModal");
+var btn = document.getElementById("modalBtn");
+var span = document.getElementsByClassName("close")[0];
+
+
 //Flags
 var pause = true; // Set the timer to paused by default
 var turn = true; // True - yellow team, False - green team
@@ -155,6 +161,23 @@ function wrongBtnClick() {
   }
 }
 
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 // Word randomizer
 function wordRandomizer() {
   // Generating a random number
@@ -183,3 +206,4 @@ function wordsDb() {
   const word6 = new WordCreator("6F", "F", "F", "F", "F", "F");
   wordList.push(word6);
 }
+
