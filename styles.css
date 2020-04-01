@@ -121,7 +121,7 @@ h1 {
 }
 
 .main-word {
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: #ff6961;
   color: white;
   font-weight: bold;
@@ -204,14 +204,14 @@ h1 {
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ff6961;
   text-decoration: none;
   cursor: pointer;
 }
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #ff6961;
+  background-color: #0d044a;
   color: white;
 }
 

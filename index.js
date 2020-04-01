@@ -59,18 +59,23 @@ playCountdown();
 
 // Functions
 
+//Inactivity toggler:
+function inactivityToggler() {
+  correctBtn.classList.toggle("inactive");
+  wrongBtn.classList.toggle("inactive");
+}
+
 // Play button logic
 function playBtnClick() {
   if (playBtn.innerHTML === "PLAY") {
     playBtn.innerHTML = "PAUSE";
     pause = false;
-    correctBtn.classList.toggle("inactive");
-    wrongBtn.classList.toggle("inactive");
+    inactivityToggler();
+    wordRandomizer();
   } else {
     playBtn.innerHTML = "PLAY";
     pause = true;
-    correctBtn.classList.toggle("inactive");
-    wrongBtn.classList.toggle("inactive");
+    inactivityToggler();
   }
 }
 
@@ -80,6 +85,7 @@ function resetBtnClick() {
   pause = true;
   seconds = gameTime;
   countdownID.textContent = seconds + " seconds";
+  inactivityToggler();
 }
 
 // Countdown logic
@@ -104,8 +110,7 @@ function playCountdown() {
         } else {
           turn = true;
         }
-        correctBtn.classList.toggle("inactive");
-        wrongBtn.classList.toggle("inactive");
+        inactivityToggler();
         backgroundSwitch();
         playCountdown();
       }, 2000);
@@ -193,17 +198,35 @@ function wordRandomizer() {
 
 // Declared words
 function wordsDb() {
-  const word1 = new WordCreator("1A", "A", "A", "A", "A", "A");
+  const word1 = new WordCreator("STÓŁ SZWEDZKI", "JEDZENIE", "STAĆ", "WSZYSTKO", "ŁAWA", "TALERZE");
   wordList.push(word1);
-  const word2 = new WordCreator("2B", "B", "B", "B", "B", "B");
+  const word2 = new WordCreator("ROK PRZESTĘPNY", "366", "4", "29", "LUTY", "JEDEN DZIEŃ");
   wordList.push(word2);
-  const word3 = new WordCreator("3C", "C", "C", "C", "C", "C");
+  const word3 = new WordCreator("FOTEL", "KRZESŁO", "SIEDZIEĆ", "KANAPA", "MIĘKKI", "SOFA");
   wordList.push(word3);
-  const word4 = new WordCreator("4D", "D", "D", "D", "D", "D");
+  const word4 = new WordCreator("PRZYTULAĆ", "RAMIONA", "KOGOŚ", "MIŁOŚĆ", "BLISKO", "CAŁOWAĆ");
   wordList.push(word4);
-  const word5 = new WordCreator("5E", "E", "E", "E", "E", "E");
+  const word5 = new WordCreator("LOGIN", "EMAIL", "HASŁO", "LOGOWAĆ SIĘ", "ZAPOMNIEĆ", "NAZWA");
   wordList.push(word5);
-  const word6 = new WordCreator("6F", "F", "F", "F", "F", "F");
+  const word6 = new WordCreator("FAWORYT", "ULUBIENIEC", "PREFEROWAĆ", "OSOBA", "LUBIĆ", "DOCENIAĆ");
   wordList.push(word6);
+  const word7 = new WordCreator("ROZBITEK", "WYSPA", "ŁÓDŹ", "SAMOTNY", "OCEAN", "URATOWAĆ SIĘ");
+  wordList.push(word7);
+  const word8 = new WordCreator("EKSCENTRYCZNY", "DZIWNY", "NIETYPOWY", "NIECODZIENNY", "INNY", "CUDACZNY");
+  wordList.push(word8);
+  const word9 = new WordCreator("CZARY", "TRIK", "WIEDŹMA", "CZARODZIEJ", "WRÓŻKA", "RÓŻDŻKA");
+  wordList.push(word9);
+  const word10 = new WordCreator("REDAKTOR", "GAZETA", "MAGAZYN", "NACZELNY", "SPRAWDZAĆ", "SŁOWO");
+  wordList.push(word10);
+  const word11 = new WordCreator("LYCRA", "STRETCH", "MATERIAŁ", "RAJSTOPY", "ROZCIĄGAĆ", "ELASTYCZNY");
+  wordList.push(word11);
+  const word12 = new WordCreator("PRZYSTAWKA", "PRZEKĄSKA", "POCZĄTEK", "DANIE", "RESTAURACJA", "JEDZENIE");
+  wordList.push(word12);
+  const word13 = new WordCreator("WSPINACZKA", "GÓRA", "WCHODZIĆ", "HIMALAJE", "ALPINISTA", "SKAŁKI");
+  wordList.push(word13);
+  const word14 = new WordCreator("SERNIK", "CIASTO", "TWARÓG", "RODZYNKI", "ZIMNY", "GALARETKA");
+  wordList.push(word14);
+  const word15 = new WordCreator("METEORYT", "SPADAĆ", "ZIEMIA", "CIAŁO NIEBIESKIE", "KOSMOS", "SKAŁA");
+  wordList.push(word15);
 }
 
