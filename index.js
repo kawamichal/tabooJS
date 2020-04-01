@@ -103,6 +103,7 @@ function playCountdown() {
     if (seconds < 0) {
       clearInterval(countdown);
       countdownID.textContent = "Time is up!";
+      inactivityToggler();
       setTimeout(function() {
         resetBtnClick();
         if (turn) {
@@ -110,7 +111,6 @@ function playCountdown() {
         } else {
           turn = true;
         }
-        inactivityToggler();
         backgroundSwitch();
         playCountdown();
       }, 2000);
