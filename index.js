@@ -40,7 +40,7 @@ var pause = true; // Set the timer to paused by default
 var turn = true; // True - yellow team, False - green team
 
 //Values
-var gameTime = 1; //
+var gameTime = 90; //
 var seconds = gameTime;
 var yellow = 0;
 var green = 0;
