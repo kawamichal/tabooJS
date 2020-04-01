@@ -16,12 +16,12 @@ h1 {
 
 #navbar {
   color: white;
-  margin-top: 0;
+  margin: 0 15px;
 }
 
 #game-box {
   background-color: #feffa3;
-  margin: 0 auto 60px;
+  margin: 0 15px 60px;
   padding-bottom: 70px;
 }
 
