@@ -25,12 +25,14 @@
     <title>tabooJS</title>
   </head>
   <body>
+
     <!-- Navbar -->
 
     <div id="navbar">
       <h1>tabooJS</h1>
     </div>
     <div id="game-box">
+
       <!-- Turn notification -->
 
       <h2 class="turn-notification">Yellow team's turn!</h2>
@@ -38,10 +40,12 @@
       <!-- Game menu -->
 
       <div id="menu-box">
-        <button class="btn playbtn">PLAY</button>
-        <button class="btn resetbtn">RESET</button>
+        <i class="clock far fa-clock"><span id="countdown">90 seconds</span></i>
 
-        <i class="far fa-clock"><span id="countdown" >90 seconds</span></i>
+        <div class="buttons">
+          <button class="btn left playbtn">PLAY</button>
+          <button class="btn right resetbtn">RESET</button>
+        </div>
 
         <ul class="word-list">
           <li class="main-word">TABOO</li>
@@ -52,13 +56,14 @@
           <li class="frb-word">ZABRONIONE</li>
         </ul>
 
-        <button id="correct">+</button>
-        <button id="wrong">-</button>
+        <button class="btn left" id="correct">CORRECT!</button>
+        <button class="btn right" id="wrong">WRONG!</button>
       </div>
 
       <!-- Score table -->
-
       <div id="score">
+      <button class="score-btn btn">SEE SCORES</button>
+
         <table class="score-table">
           <tr>
             <th>YELLOW</th>
@@ -71,6 +76,7 @@
         </table>
       </div>
     </div>
+
     <!-- Scripts -->
 
     <script src="index.js"></script>
